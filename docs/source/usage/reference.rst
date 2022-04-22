@@ -1,0 +1,4 @@
+salam
+===============
+
+.. autofunction:: test.sina

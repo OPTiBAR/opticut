@@ -11,6 +11,7 @@ Welcome to OptiCut's documentation!
    :caption: Contents:
    
    theory/theory.md
+   usage/reference
 
 
 
