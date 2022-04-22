@@ -1,4 +1,4 @@
-salam
-===============
+Reference
+=========
 
 .. autofunction:: test.sina
