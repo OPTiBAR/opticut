@@ -1,3 +1,6 @@
+import pyomo.environ as pyo
+from itertools import compress
+
 def sina(var1: str, var2: int) -> float:
     """_summary_
 
@@ -9,3 +12,5 @@ def sina(var1: str, var2: int) -> float:
         float: _description_
     """
     return 12
+
+    # pyo.SolverFactory('glpk').available()
