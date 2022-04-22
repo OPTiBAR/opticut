@@ -1,4 +1,4 @@
 Reference
 =========
 
-.. autofunction:: test.sina
+.. autofunction:: script.solve
