@@ -14,7 +14,6 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('../../opticut'))
 
-import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
@@ -31,7 +30,6 @@ author = 'Sina Hajikazemi'
 extensions = [
     'myst_parser',
     'sphinx.ext.autodoc',
-    'sphinx_rtd_theme',
 ]
 
 myst_enable_extensions = [
