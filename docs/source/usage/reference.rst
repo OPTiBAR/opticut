@@ -1,4 +1,4 @@
 Reference
 =========
 
-.. autofunction:: script.solve
+.. autofunction:: script.CuttingStock
