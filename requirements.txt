@@ -4,6 +4,7 @@ attrs==21.4.0
 Babel==2.10.1
 certifi==2021.10.8
 charset-normalizer==2.0.12
+click==8.1.2
 colorama==0.4.4
 docutils==0.17.1
 idna==3.3
