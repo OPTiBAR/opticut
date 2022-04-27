@@ -1,0 +1,31 @@
+{
+    "pieces": [
+        {
+            "length": 2,
+            "quantity": 25
+        },
+        {
+            "length": 3,
+            "quantity": 5
+        },
+        {
+            "length": 5,
+            "quantity": 10
+        }
+    ],
+    "bars": [
+        {
+            "length": 12,
+            "quantity": -1
+        },
+        {
+            "length": 10,
+            "quantity": 10
+        }
+    ],
+    "options": {
+        "blade_width": 1,
+        "blade_num": -1,
+        "pattern_num": 10
+    }
+}

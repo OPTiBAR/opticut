@@ -1,0 +1,61 @@
+{
+    "$id": "https://example.com/person.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Input",
+    "type": "object",
+    "required": [ "pieces", "bars" ],
+    "properties": {
+        "pieces": {
+            "type": "array",
+            "itmes": {
+                "type": "object",
+                "description": "piece's length and quantity."
+                "properties": {
+                    "length": {
+                        "type": "integer"
+                        "minimum": 1
+                    },
+                    "quantity": {
+                        "type": "integer"
+                        "minimum": 1
+                    },
+                }
+            }
+        },
+        "bars": {
+            "type": "array",
+            "itmes": {
+                "type": "object",
+                "description": "bar's length and quantity."
+                "properties": {
+                    "length": {
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    "quantity": {
+                        "type": "integer",
+                        "minimum": -1
+                    },
+                }
+            }
+        },
+        "options": {
+            "description": "Optional options for the problem.",
+            "type": "object",
+            "properties": {
+                "blade_width": {
+                    "type": "integer",
+                    "minimum": 0,
+                },
+                "blade_num": {
+                    "type": "integer",
+                    "description": "maximum number of blades, It can be equal to -1 or it should be greater than 1"
+                },
+                "pattern_num": {
+                    "type": "integer",
+                    "description": "maximum number of used patterns, It can be equal to -1 or it should be greater than 1"
+                }
+            }
+        }
+  }
+}
