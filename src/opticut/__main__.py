@@ -10,7 +10,13 @@ from opticut.cs import CuttingStock
 @click.option('--pattern-num', help='maximum number of used patterns', type=int)
 @click.option('--solver-name', default='glpk', help='name of the solver in lowercase')
 def cli(input, output, blade_width, blade_num, pattern_num, solver_name):
-    """Copy contents of INPUT to OUTPUT."""
+    """
+    Solve one dimensional cutting stock problem.
+    Read the list of pieces and bars and also the options from INPUT file.
+    Solve the problem and write the results to the OUTPUT file.
+
+    The command line options will override the INPUT file ones.
+    """
     cli_options = {
         'blade_width' : blade_width,
         'blade_num' : blade_num,
