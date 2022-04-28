@@ -9,6 +9,14 @@
             "quantity": 5
         },
         {
+            "length": 7,
+            "quantity": 4
+        },
+        {
+            "length": 8,
+            "quantity": 3
+        },
+        {
             "length": 5,
             "quantity": 10
         }
@@ -24,8 +32,8 @@
         }
     ],
     "options": {
-        "blade_width": 1,
-        "blade_num": -1,
-        "pattern_num": 10
+        "blade_width": 0,
+        "blade_num": 2,
+        "pattern_num": -1
     }
 }

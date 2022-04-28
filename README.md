@@ -1,66 +1,47 @@
-# opticut
-1D cutting stock problem solver
-
-It can be called as a python package, through CLI and a web based GUI.
-This Package Needs a MIP(Mixed Integer Programming) solver as a dependency.
-
-you can check the full documentation [here](https://cutting-stock-solver.readthedocs.io/en/latest/)
-
-
-<!--
-![](header.png)
-and other commented contents
--->
-
-## Installation
-Windows:
-
-Install one of the following solvers and add the executable file path to the environmental variables.
-
-```sh
-edit autoexec.bat
-```
-
-## Usage example
-
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
-
-## Release History
-
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-
-## Meta
-
-Sina Hajikazemi – sina.hkazemi@gmail.com
-
-Distributed under the MIT license. See ``LICENSE`` for more information.
-
-[https://github.com/sinahkazemi/](https://github.com/sinahkazemi/)
-
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+alabaster==0.7.12
+atomicwrites==1.4.0
+attrs==21.4.0
+Babel==2.10.1
+build==0.7.0
+certifi==2021.10.8
+charset-normalizer==2.0.12
+click==8.1.2
+colorama==0.4.4
+docutils==0.17.1
+idna==3.3
+imagesize==1.3.0
+importlib-metadata==4.11.3
+iniconfig==1.1.1
+Jinja2==3.1.1
+markdown-it-py==2.1.0
+MarkupSafe==2.1.1
+mdit-py-plugins==0.3.0
+mdurl==0.1.1
+-e git+https://github.com/SinaHKazemi/opticut@8f38b212079beb80b0d2be582eefb0c500a2a41b#egg=myproject
+myst-parser==0.17.2
+-e git+https://github.com/SinaHKazemi/opticut@8f38b212079beb80b0d2be582eefb0c500a2a41b#egg=opticut
+packaging==21.3
+pep517==0.12.0
+pluggy==1.0.0
+ply==3.11
+py==1.11.0
+Pygments==2.11.2
+Pyomo==6.4.0
+pyparsing==3.0.8
+pytest==7.1.1
+pytz==2022.1
+PyYAML==6.0
+requests==2.27.1
+snowballstemmer==2.2.0
+Sphinx==4.5.0
+sphinx-rtd-theme==1.0.0
+sphinxcontrib-applehelp==1.0.2
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp==2.0.0
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml==1.1.5
+tomli==2.0.1
+typing_extensions==4.2.0
+urllib3==1.26.9
+zipp==3.8.0

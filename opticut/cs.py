@@ -1,13 +1,10 @@
 from typing import Dict, List, Tuple
 import pyomo.environ as pyo
-import click
-import json
-from optimization import CG, Pattern
+from opticut.optimization import CG, Pattern
 
-
-class SolverError(ValueError):
+class SolverError(Exception):
     def __init__(self, *args: object) -> None:
-        super().__init__(*args)
+        super().__init__('the solver is not available')
 
 class CuttingStock():
     def __init__(self, solver_name:str) -> None:
@@ -39,39 +36,11 @@ class CuttingStock():
         :rtype: Dict
         """
         cg = CG(self.solver, pieces, bars, blade_width, pattern_num, blade_num)
-        cg.solve()
-
-
-
-@click.command()
-@click.argument('input', type=click.File('r'))
-@click.argument('output', type=click.File('w'))
-@click.option('--blade-width', help="blade's width")
-@click.option('--blade-num', help='maximum number of blades')
-@click.option('--pattern-num', help='maximum number of used patterns')
-@click.option('--solver-name', default='glpk', help='name of the solver in lowercase')
-def cli(input, output, blade_width, blade_num, pattern_num, solver_name):
-    """Copy contents of INPUT to OUTPUT."""
-    cli_options = {
-        'blade_width' : blade_width,
-        'blade_num' : blade_num,
-        'pattern_num' : pattern_num,
-    }
-    input_data = json.load(input)
-    data = {}
-    for item in ('pieces', 'bars'): 
-        data[item] = {p['length']:p['quantity'] for p in input_data[item]}
-
-    input_options = input_data.get('options', {})
-
-    options = {}
-    for option in cli_options:
-        if cli_options[option] is not None:
-            options[option] = cli_options[option]
-        elif option in input_options:
-            options[option] = input_options[option]
-    cs = CuttingStock(solver_name)
-    cs.solve(**data, **options)
-
-if __name__ == '__main__':
-    cli()
+        res = cg.solve()
+        # pl = {}
+        # for pattern,pn in res.items():
+        #     for length,ln in pattern.pieces.items():
+        #         pl[length] = pl.get(length,0) + ln * pn
+        # print(pl)
+        # print(pieces)
+        return(res)
